@@ -16,7 +16,7 @@ class TypeSeeder extends Seeder
     public function run(Faker $faker): void
     {
         $types = [
-            'Long term', 'Short term', 'Mid term'
+            'Long', 'Short', 'Mid'
         ];
 
         foreach ($types as $type) {
