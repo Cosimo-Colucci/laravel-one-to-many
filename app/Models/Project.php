@@ -17,4 +17,9 @@ class Project extends Model
         'slug',
         'project_start',
     ];
+
+    public function Project(){
+        // con hasMany sto automanìticamente dicendo di essere il modello indipendente e ha una relazione con il modello selezionato nel metodo, che dipende da questo modello.
+        return $this->belongsTo(type::class);
+    }
 }
