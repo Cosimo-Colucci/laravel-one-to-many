@@ -18,8 +18,8 @@ class Project extends Model
         'project_start',
     ];
 
-    public function Project(){
+    public function type(){
         // con hasMany sto automanìticamente dicendo di essere il modello indipendente e ha una relazione con il modello selezionato nel metodo, che dipende da questo modello.
-        return $this->belongsTo(type::class);
+        return $this->belongsTo(Type::class);
     }
 }

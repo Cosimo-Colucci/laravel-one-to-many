@@ -6,7 +6,8 @@
         <div class="col-12">
             
             <div class="card">
-                <h4 class="card-header">{{$project->id}}-{{$project->slug}}</h4>
+                <h4 class="card-header">{{$project->id}}-{{$project->slug}}-{{$project->type->name}}</h4>
+                <!-- @dump($project->type) -->
                 <div class="card-body">
                     <h4 class="card-title">{{$project->title}}</h4>
                     <h5>{{$project->owner}}</h5>
