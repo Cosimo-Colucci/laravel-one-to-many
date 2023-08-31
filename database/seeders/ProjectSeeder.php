@@ -17,11 +17,11 @@ class ProjectSeeder extends Seeder
     public function run(Faker $faker): void
     {
 
-        $types = Type::all();
-
+        $types = Type::all()->pluck('id');
+        // dd($types);
         for ($i=0; $i < 50; $i++) { 
             $newProject = new Project();
-            $newProject->type_id = ($faker->randomElement('types'))->id;
+            $newProject->type_id = ($faker->randomElement($types));
             $newProject->title = ucfirst($faker->Unique()->words(5, true));
             $newProject->content = $faker->paragraphs(50, true);
             $newProject->project_start = $faker->dateTime();
